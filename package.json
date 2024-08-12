@@ -1,0 +1,19 @@
+{
+  "name": "backend_project_nodejs",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene un proyecto sencillo desarrollado en Node.js y Express, creado con el objetivo de demostrar mis habilidades en desarrollo backend y mi motivación para unirme a la 2da Convocatoria de los Grupos de Trabajo AUJ.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
