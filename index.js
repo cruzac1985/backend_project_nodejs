@@ -32,10 +32,17 @@ app.get('/libros/:id', (req, res) => {
 
 // Añadir un nuevo libro
 app.post('/libros', (req, res) => {
+    const { titulo, autor } = req.body;
+
+    // Validación título y autor no deben ser cadenas vacías
+    if (!titulo || !autor) {
+        return res.status(400).json({ mensaje: 'El título y el autor son campos obligatorios y no pueden estar vacíos.' });
+    }
+
     const nuevoLibro = {
         id: libros.length + 1,
-        titulo: req.body.titulo,
-        autor: req.body.autor
+        titulo,
+        autor
     };
     libros.push(nuevoLibro);
     res.status(201).json(nuevoLibro);
